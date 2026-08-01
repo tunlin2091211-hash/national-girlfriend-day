@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy National Girlfriend Day ❤️</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+background:linear-gradient(135deg,#ff8fb1,#ffd6e7);
+font-family:sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+.card{
+width:90%;
+max-width:420px;
+background:#fff;
+border-radius:20px;
+padding:20px;
+text-align:center;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+img{
+width:100%;
+height:420px;
+object-fit:cover;
+border-radius:15px;
+transition:1s;
+}
+
+h1{
+margin:15px 0;
+color:#ff2e63;
+font-size:28px;
+}
+
+p{
+font-size:16px;
+line-height:28px;
+color:#444;
+}
+
+button{
+margin-top:20px;
+padding:12px 30px;
+border:none;
+border-radius:30px;
+background:#ff2e63;
+color:#fff;
+font-size:17px;
+cursor:pointer;
+}
+
+.heart{
+position:absolute;
+color:red;
+font-size:25px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-50px);}
+100%{transform:translateY(110vh);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<img id="slide" src="photo1.jpg">
+
+<h1>💖 Happy National Girlfriend Day 💖</h1>
+
+<p>
+မောင်ရဲ့ ဘဝထဲမှာ အလှဆုံးကောင်မလေးဖြစ်တဲ့ <b>Ma Ma</b> ရေ...<br><br>
+
+မောင်ကို အမြဲပြုံးပျော်စေခဲ့တဲ့ အပြုံးတိုင်း၊
+ရယ်မောပေးခဲ့တဲ့ အချိန်တိုင်း၊
+အတူတူဖြတ်သန်းခဲ့တဲ့ အမှတ်တရတိုင်းအတွက် ကျေးဇူးတင်ပါတယ်။<br><br>
+
+ဘဝက ဘယ်လိုပဲ ရှေ့ဆက်သွားပါစေ...
+မောင်ရဲ့ နှလုံးသားထဲမှာ Ma Ma အတွက်
+နေရာလေးက အမြဲရှိနေမှာပါ။<br><br>
+
+<b>Ma Ma ကို အရမ်းချစ်တယ် ❤️</b><br>
+<b>Forever & Always.</b>
+</p>
+
+<button onclick="love()">💌 Open My Heart</button>
+
+</div>
+
+<script>
+
+let photos=[
+"photo1.jpg",
+"photo2.jpg",
+"photo3.jpg",
+"photo4.jpg",
+"photo5.jpg"
+];
+
+let i=0;
+
+setInterval(()=>{
+i=(i+1)%photos.length;
+document.getElementById("slide").src=photos[i];
+},2500);
+
+function love(){
+alert("❤️ Happy National Girlfriend Day Ma Ma ❤️\n\nမောင် အမြဲချစ်နေမှာပါ။");
+}
+
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(3+Math.random()*3)+"s";
+h.style.fontSize=(20+Math.random()*20)+"px";
+document.body.appendChild(h);
+
+setTimeout(()=>h.remove(),6000);
+},250);
+
+</script>
+
+</body>
+</html>index.html
